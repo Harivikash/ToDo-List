@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div>
+        <div align="center" class="header">
+            <div align="center" style="margin-bottom: 20px; text-shadow: black 4px 4px 4px;">
+                <h1>ToDo List</h1>
+            </div>
+            <div align="center" class="navigator">
+                <h3 id="home">Home</h3>
+                <h1>|</h1>
+                <h3 id="theme">Dark Mode <i class="bi bi-moon"></i></h3>
+                <h1>|</h1>
+                <h3 id="about">About Us</h3>
+                <h1>|</h1>
+                <h3 id="contact">Contact Us</h3>
+            </div>
+        </div>
+        <div align="center" class="todo_container">
+            <form action="http:/">
+                <h2 style="color:white;font-weight: 300;text-shadow: black 2px 2px 2px; font: bold;">ToDo :</h2>
+                <hr>
+                <input type="text" id="input" placeholder="Input your ToDo's">
+                <hr>
+                <label for="priority" style="color: yellow;">Select Priority</label>
+                <select name="priority" id="prior" required>
+                    <option onclick="ColorChange()" class="color" value="High" style="background-color: red;">High</option>
+                    <option onclick="ColorChange()" class="color" value="Medium" style="background-color: orange;">Medium</option>
+                    <option onclick="ColorChange()" class="color" value="Low" style="background-color: green;" selected>Low</option>
+                </select>
+                <hr>
+                <span title="Add todo" class="btn bi bi-plus-square-fill" onclick="newElement()"></span>
+            </form>
+        </div>
+        <div align="center" class="todo">
+            <h1>ToDo list</h1>
+            <div class="filter">
+                <label for="filter">Filter(priority) : </label>
+                <select align="right" name="filter" id="prior">
+                <option value="High" style="background-color: red;" selected>High</option>
+                <option value="Medium" style="background-color: orange;">Medium</option>
+                <option value="Low" style="background-color: green;" >Low</option>
+            </select>
+            </div>
+            <ul align="center" id="ul">
+                <li id="List">
+                    Todo List
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="todo.js"></script>
+</body>
+
+</html>
